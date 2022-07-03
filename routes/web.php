@@ -16,17 +16,18 @@ use Inertia\Inertia;
 */
 
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::redirect('/', '/prototype/login');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::prefix('prototype')->group(function(){
+        Route::get('/login',function(){
+           return inertia('Prototype/Login');
+        })->name("prototype.login");
+        Route::get('/register',function(){
+           return inertia('Prototype/Register');
+        })->name("prototype.register");
+});
 require __DIR__.'/auth.php';
