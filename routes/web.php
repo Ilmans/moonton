@@ -31,10 +31,14 @@ Route::prefix('prototype')->group(function(){
         })->name("prototype.register");
         Route::get('/dashboard',function(){
            return inertia('Prototype/Dashboard');
-        })->name("dashboard");
+        })->name("prototype.dashboard");
 
         Route::get('/subscriptionPlan',function(){
            return inertia('Prototype/SubscriptionPlan');
         })->name("subscriptionPlan");
+
+        Route::get('/movie/{slug}',function(){
+           return inertia('Prototype/Movie/Show');
+        })->name("movie.show");
 });
 require __DIR__.'/auth.php';

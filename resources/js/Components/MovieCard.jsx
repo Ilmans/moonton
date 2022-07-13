@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/inertia-react';
 import React from 'react'
 
 function MovieCard({
@@ -29,7 +30,8 @@ function MovieCard({
           >
               <img src="../icons/ic_play.svg" className width={50} alt="" />
           </div>
-          <a href="watching.html" className="inset-0 absolute z-50" />
+          <Link href={route("movie.show",slug)} className="inset-0 absolute z-50" />
+
       </div>
   );
 }
