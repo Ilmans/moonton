@@ -11,5 +11,5 @@
     @apply text-white border border-white;
 }
 .btn-white-outline {
-    @apply text-white border    border-white;
+    @apply text-black border    border-black;
 }

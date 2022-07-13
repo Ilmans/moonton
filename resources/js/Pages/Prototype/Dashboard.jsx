@@ -33,7 +33,7 @@ function Dashboard() {
                     {/* Movie Thumbnail */}
                     {[1, 2, 3, 4].map(() => (
                         <FeaturedMovie
-                            key={1}
+                            key={Math.random()}
                             slug="the-batman"
                             thumbnail="../images/featured-1.png"
                             name="The Batman In Love"
@@ -47,7 +47,7 @@ function Dashboard() {
                     </div>
                     <Flickity className="" options={flickityOptions}>
                         {[1, 2, 3, 4, 5, 6].map(() => (
-                            <MovieCard key={1}
+                            <MovieCard key={Math.random()} 
                             thumbnail={"../images/featured-1.png"}
                             name={"The Batman In Love"}
                             category={"Action"}
