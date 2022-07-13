@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer components {
+[type='text'], 
+[type='email'], 
+[type='url'], 
+[type='password'], 
+[type='number'], 
+[type='date'], 
+[type='datetime-local'], 
+[type='month'], 
+[type='search'], 
+[type='tel'], 
+[type='time'], 
+[type='week'], 
+[multiple], 
+textarea, 
+select {
+   border-color : transparent;
+}
+[type='text'], 
+[type='email'], 
+[type='url'], 
+[type='password'], 
+[type='number'], 
+[type='date'], 
+[type='datetime-local'], 
+[type='month'], 
+[type='search'], 
+[type='tel'], 
+[type='time'], 
+[type='week'], 
+[multiple], 
+textarea:focus, 
+select:focus {
+        border-color : transparent;
+        --tw-ring-color : transparent;
+    }
+}
+
+
+
+
