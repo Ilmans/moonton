@@ -24,6 +24,7 @@ function Register() {
                event.target.name,
                event.target.value
            );
+        
        };
 
        const submit = (e) => {
@@ -105,7 +106,7 @@ function Register() {
                                     />
                                     <Input
                                         type="password"
-                                        name="password_cofirmation"
+                                        name="password_confirmation"
                                         placeholder="Confirm Password"
                                         handleChange={onHandleChange}
                                         required
